@@ -1,0 +1,4 @@
+Galelfin
+
+A minimalistic compiling based package manager written in rust (like portage). Unlike other package managers it gives the user the option of download a premade binary or to let it compile the package on the users system; in the case you want it to compile the package, it gains info about the packages through a galerlay (an overlay for this package manager) which can be changed and added, but unlike other package managers it gi.
+

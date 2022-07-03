@@ -1,0 +1,8 @@
+[package]
+author = ["Thamognya Kodi <contact@thamognya.com>"]
+name = "galelfin"
+version = "0.0.1"
+edition = "2021"
+
+[dependencies]
+
