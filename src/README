@@ -1,0 +1,14 @@
+File list and what it does:
+
+main.rs
+- handles the arguments
+- handles errors
+
+help.rs
+- provides the error messages and help messsages
+
+bin.rs
+- install bin packages
+
+compile.rs
+- compile packages on host

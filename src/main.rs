@@ -30,10 +30,17 @@ pub fn main()
         // if it is -b or --bin download a bin
         else if modifier.eq("-b") || modifier.eq("--bin")
         {
-            // modifier
-            modifier = &args[1];
-            // work to do
-            println!("{}", modifier);
+            if argLength == 2
+            {
+                // modifier
+                modifier = &args[1];
+                // work to do
+                println!("{}", modifier);
+            }
+            else
+            {
+                help::mistake();
+            }
         }
         // if it is not any of the following modifiers or args just download the package
         else
