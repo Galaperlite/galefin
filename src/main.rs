@@ -30,30 +30,54 @@ pub fn main()
         // if it is -b or --bin download a bin
         else if modifier.eq("-b") || modifier.eq("--bin")
         {
-            if argLength == 2
+            if args[1].eq("-a") || args[1].eq("--ask")
             {
-                // modifier
-                modifier = &args[1];
-                // work to do
-                println!("{}", modifier);
+                modifier = &args[2];
+                println!("test: {}", modifier);
             }
             else
             {
-                help::mistake();
+                if argLength == 2
+                {
+
+                    // modifier
+                    modifier = &args[1];
+                    // work to do
+                    println!("{}", modifier);
+                }
+                else
+                {
+                    help::mistake();
+                }
             }
+        }
+        else if modifier.eq("-ba") || modifier.eq("-ab")
+        {
+            // modifier
+            modifier = &args[1];
+            // work to do
+            println!("{}", modifier);
         }
         // if it is not any of the following modifiers or args just download the package
         else
         {
-            // if they give a -__ something that does not match the above then throw error
-            if modifierFirstLetter.eq(&'-')
+            if modifier.eq("-a") || modifier.eq("--ask")
             {
-                help::mistake();
+                modifier = &args[1];
+                println!("test: {}", modifier);
             }
-            // download the package compiling way
             else
             {
-                println!("{}", modifier);
+                // if they give a -__ something that does not match the above then throw error
+                if modifierFirstLetter.eq(&'-')
+                {
+                    help::mistake();
+                }
+                // download the package compiling way
+                else
+                {
+                    println!("{}", modifier);
+                }
             }
         }
     }
